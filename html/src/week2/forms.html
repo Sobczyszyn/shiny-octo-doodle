@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <title>Ryszard's sample html 5 form</title>
+    <style>input {width: 200px}</style>
+</head>
+<body>
+<h1>HTML5 inputs</h1>
+
+<form action="http://localhost:8080/gui/echo">
+    <table>
+        <tr>
+            <td>Select browser</td>
+            <td>
+                <input list="browsers" name="browser">
+                <datalist id="browsers">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+            </td>
+        </tr>
+        <tr>
+            <td>Search:</td>
+            <td><input type="search" name="search" placeholder="type word for search...."/></td>
+        </tr>
+        <tr>
+            <td>Get number:</td>
+            <td><input type="number" name="number"/></td>
+        </tr>
+        <tr>
+            <td>Get range:</td>
+            <td><input type="range" name="range"/></td>
+        </tr>
+        <tr>
+            <td>Select color:</td>
+            <td><input type="color" name="color"/></td>
+        </tr>
+        <tr>
+            <td>Phone number:</td>
+            <td><input type="tel" name="tel"/></td>
+        </tr>
+        <tr>
+            <td>URL:</td>
+            <td><input type="url" name="url"/></td>
+        </tr>
+        <tr>
+            <td>email:</td>
+            <td><input type="email" name="email"/></td>
+        </tr>
+        <tr>
+            <td>Date:</td>
+            <td><input type="date" name="date"/></td>
+        </tr>
+        <tr>
+            <td>Month:</td>
+            <td><input type="month" name="month"/></td>
+        </tr>
+        <tr>
+            <td>Week:</td>
+            <td><input type="week" name="week"/></td>
+        </tr>
+        <tr>
+            <td>Time:</td>
+            <td><input type="time" name="time"/></td>
+        </tr>
+        <tr>
+            <td>Date time:</td>
+            <td><input type="datetime" name="datetime"/></td>
+        </tr>
+        <tr>
+            <td>Date time local:</td>
+            <td><input type="datetime-local" name="dateTimeLocal"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Send"/></td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>
