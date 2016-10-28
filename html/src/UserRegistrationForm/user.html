@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration form with styles.</title>
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+        textarea, select, input {width: 200px;display: block}
+        input[type="submit"] {width: 50%;margin: auto;padding: 10px;}
+        input[required] {background-color:yellow} /* required with background */
+        .label {color: blue; text-transform: capitalize}
+        legend {color:green}
+        fieldset {width: 90%}
+        form {min-width: 350px;
+            border: 3px solid #73AD21;
+            max-width: 500px;
+            }
+        body {background-color: lightgreen; }
+
+    .center {
+        margin: auto;
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
+
+<h1>User registration form</h1>
+
+<form class="center" action="http://localhost:8080/gui/echo" method="post">
+    <fieldset>
+        <legend>Identification data:</legend>
+        <span class="label">name:</span>
+        <input type="text" autofocus placeholder="unique user name" required minlength="3"
+               maxlength="30"></td>
+
+        <span class="label">email:</span>
+        <input type="email" placeholder="user@domain.com">
+    </fieldset>
+
+    <fieldset>
+        <legend>Personal</legend>
+        <span class="label">gender:</span>
+        <select>
+            <option value="" selected>Select</option>
+            <option value="F">Female</option>
+            <option value="M">Male</option>
+            <option value="O">Other</option>
+        </select>
+
+        <span class="label">date of birth:</span>
+        <input type="date" name="dob">
+
+        <span class="label">favorite color:</span>
+        <input type="color" name="color"/>
+    </fieldset>
+
+    <fieldset>
+        <legend>Education</legend>
+        <span class="label">school name:</span>
+        <input type="text" name="schoolName">
+
+        <span class="label">school url:</span>
+        <input type="url" name="schoolURL">
+
+        <span class="label">education start:</span>
+        <input type="month" name="graduationStart">
+
+        <span class="label">education end:</span>
+        <input type="month" name="graduationEnd">
+
+        <span class="label">GPA:</span>
+        <input type="number" name="gpa" min="1" max="6" step="0.01">
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Contact</legend>
+        <span class="label">phone number:</span>
+        <input type="tel" name="phone">
+
+        <span class="label">address:</span>
+        <textarea rows="4" cols="30" name="address"></textarea>
+
+    </fieldset>
+    <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>

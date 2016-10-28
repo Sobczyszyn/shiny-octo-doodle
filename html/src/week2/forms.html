@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <title>Ryszard's sample html 5 form</title>
     <style>input {width: 200px}</style>
+    <link rel="stylesheet" href="simple.css">
 </head>
 <body>
 <h1>HTML5 inputs</h1>
 
 <form action="http://localhost:8080/gui/echo">
     <table>
-        <tr>
+        <tr id="t1">
             <td>Select browser</td>
             <td>
-                <input list="browsers" name="browser">
+                <input id="browser" list="browsers" name="browser">
                 <datalist id="browsers">
                     <option value="Internet Explorer">
                     <option value="Firefox">
@@ -30,7 +31,7 @@
         </tr>
         <tr>
             <td>Get number:</td>
-            <td><input type="number" name="number"/></td>
+            <td><input type="number" name="number" min="1"/></td>
         </tr>
         <tr>
             <td>Get range:</td>
