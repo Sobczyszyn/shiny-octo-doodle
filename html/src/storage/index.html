@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Storage - test</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="db.js"> </script>
+</head>
+<body>
+
+
+<form>
+    Product id: <input type="text" name="productId" id="productId"/><br>
+    Short name: <input type="text" name="name" id="shortName"/><br>
+    Description: <input type="text" name="description" id="description"/><br>
+    Price: <input type="number" name="price" id="price"/><br>
+
+    <input type="button" name="addBtn" value="Add" id="addBtn"/>
+    <input type="button" name="removeBtn" value="Remove" id="removeBtn"/>
+    <input type="button" name="getBtn" value="Get" id="getBtn"/>
+
+</form>
+<div id="result"></div>
+
+</body>
+</html>
