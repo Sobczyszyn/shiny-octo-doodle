@@ -23,7 +23,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    var url = 'https://www.google.pl/maps/@'+ position.coords.latitude+','+position.coords.longitude+',15z';
+    var url = 'http://maps.google.com/maps?z=12&t=m&q=loc:'+position.coords.latitude+'+'+position.coords.longitude;
     loc.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
     but.innerHTML = 'Show maps!';
     but.onclick = function (){
