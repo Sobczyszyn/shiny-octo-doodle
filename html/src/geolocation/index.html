@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geolocation - sample usage</title>
+</head>
+<body>
+Your location: <p id="demo"></p>
+<button id="getLocation" onclick="getLocation()">Get location!</button>
+
+<noscript>Your browser does not support Java Script!</noscript>
+<script>
+var loc = document.getElementById("demo");
+var but = document.getElementById("getLocation");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        loc.innerHTML = "Geolocation is not supported by this browser.";
+        but.style = 'display: none'
+    }
+}
+
+function showPosition(position) {
+    var url = 'https://www.google.pl/maps/@'+ position.coords.latitude+','+position.coords.longitude+',15z';
+    loc.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+    but.innerHTML = 'Show maps!';
+    but.onclick = function (){
+        window.location.assign(url);
+    }
+}
+</script>
+
+</body>
+</html>
