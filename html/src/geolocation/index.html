@@ -6,19 +6,23 @@
 </head>
 <body>
 Your location: <p id="demo"></p>
+<canvas id="myCanvas" width="200" height="100" style="display:none; margin-bottom:10px">Your browser does not support the HTML5 canvas tag.</canvas>
 <button id="getLocation" onclick="getLocation()">Get location!</button>
+
 
 <noscript>Your browser does not support Java Script!</noscript>
 <script>
 var loc = document.getElementById("demo");
 var but = document.getElementById("getLocation");
+var myCanvas = document.getElementById("myCanvas");
 
 function getLocation() {
     if (navigator.geolocation) {
+        loc.innerHTML = 'Getting location...';
         navigator.geolocation.getCurrentPosition(showPosition);
     } else {
         loc.innerHTML = "Geolocation is not supported by this browser.";
-        but.style = 'display: none'
+        but.style.display = 'none'
     }
 }
 
@@ -29,8 +33,28 @@ function showPosition(position) {
     but.onclick = function (){
         window.location.assign(url);
     }
+    if(myCanvas){
+        myCanvas.style.display = 'block';
+        draw();
+    }
+}
+function draw(){
+    var ctx = myCanvas.getContext("2d");
+    ctx.beginPath();
+    ctx.strokeStyle = "blue";
+    ctx.arc(100,50,40,0,2*Math.PI);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.strokeStyle = "red";
+    ctx.moveTo(90,50);
+    ctx.lineTo(110,50);
+    ctx.moveTo(100,40);
+    ctx.lineTo(100,60);
+    ctx.stroke();
 }
 </script>
+
 
 </body>
 </html>
